@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen">
+  <div class="w-4/5 pt-12 flex flex-col mx-auto items-center gap-y-6">
+    <h1 class="text-blue-600 text-center text-xl">
+      Моделирование магнитного поля, создаваемого прямыми токами
+    </h1>
+
+    <h3 class="text-red-600 text-lg">
+      Нажмите на экран, чтобы добавить источник
+    </h3>
+
+    <canvas id="my-canvas" width="800" height="600" class="border-2 border-blue-600 rounded-xl"></canvas>
+
+    <div class="gap-x-4 flex">
+      <button 
+        class="bg-blue-100 text-blue-600 px-4 py-2 shadow-md rounded-xl transition-all hover:scale-105 active:scale-95"
+        onclick=compile()
+      >Результат</button>
+      <button 
+        class="bg-blue-100 text-blue-600 px-4 py-2 shadow-md rounded-xl transition-all hover:scale-105 active:scale-95"
+        onclick=clearCanvas()
+      >Очистить</button>
+    </div>
+
+    <div 
+      id="inputs"
+      class="flex items-center gap-x-[14px]"
+    >
+
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
