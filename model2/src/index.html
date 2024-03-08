@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./output.css" rel="stylesheet">
+	<title>Document</title>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+	<main class="min-h-screen grid place-items-center">
+		<h1 class="text-lg text-blue-600">Магнитное поле катушек Гельмгольца. Визуализация графика B(x)</h1>
+
+		<ul class="flex flex-col gap-y-6">
+			<li class="flex justify-between w-96 items-center">
+				<p>Радиус катушек (м)</p>
+				<input 
+					id="input-radius"
+					type="number"
+					class="w-32 border-2 border-blue-600 rounded-3xl px-4"
+				/>
+			</li>
+
+			<li class="flex justify-between w-96 items-center">
+				<p>Количество витков в катушках (ед.)</p>
+				<input 
+					id="input-qty"
+					type="number"
+					class="w-32 border-2 border-blue-600 rounded-3xl px-4"
+				/>
+			</li>
+			
+			<li class="flex justify-between w-96 items-center">
+				<p>Величина тока (А)</p>
+				<input
+					id="input-electricity"
+					type="number"
+					class="w-32 border-2 border-blue-600 rounded-3xl px-4"
+				/>
+			</li>
+		</ul>	
+
+		<button 
+			class="mt-6 px-4 mx-auto py-2 w-40 bg-blue-600 text-white rounded-3xl"
+			onclick=calculate()
+		>Построить график</button>
+
+		<div style="width: 700px; height: 450px;" id="myPlot"></div>
+	</main>
+
+	<script src="./main.js"></script>
+</body>
+
+</html>

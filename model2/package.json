@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "scripts": {
+    "build": "npx webpack --mode production",
+    "start": "npx webpack-dev-server --mode development"
+  },
+  "dependencies": {
+    "gh-pages": "^6.1.1",
+    "plotly": "^1.0.6"
+  }
+}
