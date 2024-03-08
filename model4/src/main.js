@@ -34,7 +34,7 @@ const calculate = () => {
   const b = parseFloat(document.getElementById("input-b").value);
   const frequency = parseFloat(document.getElementById("input-frequency").value);
   const resist = parseFloat(document.getElementById("input-resist").value);
-  const square = parseFloat(document.getElementById("input-square").value);
+  const square = 1;
 
   const tValues = [];
   const IValues = [];
