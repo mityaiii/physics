@@ -42,7 +42,7 @@ function calculate() {
   const layout = {
       title: "B(x)",
       xaxis: {
-          title: 'x, м',
+          title: 'x, мс',
       },
       yaxis: {
           autorange: true,
