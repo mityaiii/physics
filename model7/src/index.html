@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-2.29.1.min.js" charset="utf-8"></script>
+  <title>Document</title>
+</head>
+
+<body class="min-h-screen">
+  <div class="w-4/5 pt-12 flex flex-col mx-auto items-center gap-y-6">		
+    <h1 class="text-lg text-blue-600">
+      Визуализация сложения колебаний. Биения
+    </h1>
+
+		<div class="flex gap-x-4">
+			<div style="width: 700px; height: 450px;" id="beating"></div>
+		</div>
+
+    <ul class="flex flex-col gap-y-6">
+			<li class="flex justify-between w-96 items-center">
+				<p>Амплитуда первого колебания (м):</p>
+				<input 
+				 	min="0"
+					id="input-a1"
+					type="number"
+					class="w-32 border-2 border-blue-600 rounded-3xl px-4"
+				/>
+			</li>
+
+			<li class="flex justify-between w-96 items-center">
+				<p>Частота первого колебания (Гц):</p>
+				<input 
+					min="0"
+					id="input-f1"
+					type="number"
+					class="w-32 border-2 border-blue-600 rounded-3xl px-4"
+				/>
+			</li>
+			
+			<li class="flex justify-between w-96 items-center">
+				<p>Амплитуда второго колебания (м): </p>
+				<input
+					min="0"
+					id="input-a2"
+					type="number"
+					class="w-32 border-2 border-blue-600 rounded-3xl px-4"
+				/>
+			</li>
+
+      <li class="flex justify-between w-96 items-center">
+				<p>Частота второго колебания (Гц): </p>
+				<input
+					min="0"
+					id="input-f2"
+					type="number"
+					class="w-32 border-2 border-blue-600 rounded-3xl px-4"
+				/>
+			</li>
+		</ul>
+    <button 
+      class="mt-6 px-4 mx-auto py-2 w-40 bg-blue-600 text-white rounded-3xl"
+      onclick=calculate()
+    >Построить график</button>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
