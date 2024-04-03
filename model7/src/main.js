@@ -10,7 +10,7 @@ const drawSumOfFrequency = (data) => {
     },
     yaxis: {
         autorange: true,
-        title: 'x, М',
+        title: 'x, м',
     }
   };
 
