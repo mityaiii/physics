@@ -36,6 +36,12 @@ const calculate = () => {
   const resist = parseFloat(document.getElementById("input-resist").value);
   const square = 1;
 
+  if (b < 0 || frequency < 0 || resist < 0) {
+    alert("Values must be positive");
+
+    return;
+  }
+
   const tValues = [];
   const IValues = [];
   const EValues = [];
