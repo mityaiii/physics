@@ -1,9 +1,9 @@
 
-const drawGraphic = (max_x, data) => {
+const drawGraphic = (delta, data) => {
   const layout = {
     title: "Интерференционные полосы",
     xaxis: {
-      range: [-max_x, max_x],
+      range: [-delta, delta],
       title: 'theta, рад',
     },
     yaxis: {
@@ -57,9 +57,8 @@ const calculate = () => {
   for (let theta = -Math.PI; theta < Math.PI; theta += Math.PI * 1e-6) {
     thetaValues.push(theta);
 
-    const k = Math.PI * Math.sin(theta) / waveLength;
-    const alpha = slotSize * k;
-    const beta = period * k;
+    const alpha = slotSize * Math.PI * Math.sin(theta) / waveLength;
+    const beta = period * Math.PI * Math.sin(theta) / waveLength;
     const I = Math.pow(Math.sin(numberOfSlots * beta) / Math.sin(beta), 2) * Math.pow(Math.sin(alpha) / alpha, 2);
 
     IValues.push(I);
@@ -71,7 +70,7 @@ const calculate = () => {
     mode: "lines"
   }];
 
-  const deltaX = Math.min(slotSize, period, 1);
+  const deltaTheta = Math.min(slotSize, period, 1);
 
-  drawGraphic(deltaX, data);
+  drawGraphic(deltaTheta, data);
 }
