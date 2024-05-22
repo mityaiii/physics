@@ -54,11 +54,11 @@ const calculate = () => {
   const thetaValues = [];
   const IValues = [];
 
-  for (let theta = -Math.PI; theta < Math.PI; theta += Math.PI * 1e-6) {
-    thetaValues.push(theta);
+  for (let t = -Math.PI; t < Math.PI; t += Math.PI * 1e-6) {
+    thetaValues.push(t);
 
-    const alpha = slotSize * Math.PI * Math.sin(theta) / waveLength;
-    const beta = period * Math.PI * Math.sin(theta) / waveLength;
+    const alpha = slotSize * Math.PI * Math.sin(t) / waveLength;
+    const beta = period * Math.PI * Math.sin(t) / waveLength;
     const I = Math.pow(Math.sin(numberOfSlots * beta) / Math.sin(beta), 2) * Math.pow(Math.sin(alpha) / alpha, 2);
 
     IValues.push(I);
